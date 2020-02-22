@@ -44,7 +44,7 @@ void setup() {
 }
 
 void loop() {
-  myFile = SD.open("Ryan.csv"); //Åbner SD kortet og skriver nedenstående på filen (hvis filen findes)
+  myFile = SD.open("Test.csv"); //Åbner SD kortet og skriver nedenstående på filen (hvis filen findes)
   sensorValue = analogRead(analogInPin);
   outputValue = map(sensorValue, 0, 1023, 0, 255);
   delay(20);
