@@ -1,3 +1,5 @@
+// Last edited by: Mathias Hovmark
+// 27.03.20
 
 //////////// Initiering ///////////
 
