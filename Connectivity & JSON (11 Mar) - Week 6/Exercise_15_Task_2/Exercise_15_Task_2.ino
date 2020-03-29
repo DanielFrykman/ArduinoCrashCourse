@@ -1,8 +1,8 @@
 //made by: Daniel Lilja Frykman
 #include <ESP8266WiFi.h>
 
-const char* ssid = "4G Wi-Fi 3Danmark-651A"; // your wifi hotspot name
-const char* password = "glucoses"; //wifi password
+const char* ssid = "..."; // your wifi hotspot name
+const char* password = "..."; //wifi password
 
 int ledPin = D7; // which is GPIO13. With nodemcu, you should directly use the pin names as they are stated on the board...
 
