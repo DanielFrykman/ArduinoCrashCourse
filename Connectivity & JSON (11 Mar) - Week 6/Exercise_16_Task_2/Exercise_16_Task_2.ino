@@ -4,8 +4,8 @@
 #include <ArduinoJson.h>
 #define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
 
-const char* ssid = "4G Wi-Fi 3Danmark-651A"; // your wifi hotspot name
-const char* password = "glucoses"; //wifi password
+const char* ssid = "..."; // your wifi hotspot name
+const char* password = "..."; //wifi password
 
 void setup() {
   Serial.begin(115200);
