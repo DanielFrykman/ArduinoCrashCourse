@@ -3,12 +3,12 @@
 
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  13;      // the number of the LED pin
-           // The higher the number, the slower the timing.
+
 int buttonState = 0;         // variable for reading the pushbutton status
 int lastbuttonState = 0;
-unsigned long startMillis;  //some global variables available anywhere in the program
+unsigned long startMillis;  
 unsigned long currentMillis;
-const unsigned long period = 5000;  //the value is a number of milliseconds
+const unsigned long period = 5000;  
 int counter = 0;
 
 void setup() {
@@ -25,7 +25,7 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   currentMillis = millis();
   
-  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  // check if the pushbutton is pressed (status = HIGH).
   if (buttonState != lastbuttonState) {
     delay(10); // mitigate bouncing causing button state to change
     buttonState = digitalRead(buttonPin);
