@@ -52,7 +52,8 @@ void loop() {
 
   // If the button state is high and 5 seconds have passed, reset counter and millis. (Could also be achieved with a while-loop).
   if (buttonState == HIGH) {
-    if (currentMillis - buttonMillis >= period) {
+    currentMillis = millis();
+    if ((currentMillis - buttonMillis) >= period) {
       counter = 0;
       buttonMillis = currentMillis;
     }
