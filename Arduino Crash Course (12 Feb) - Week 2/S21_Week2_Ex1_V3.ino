@@ -1,17 +1,18 @@
 // 41028 DTU, Spring 21
 // author : Mathias Hovmark
 // Week 2 - exercise 1.3
+// This version uses two different timer logics - one for checking duration of how long the button has been held down and one to print every 1000 ms
 
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  13;      // the number of the LED pin
 
 int buttonState = 0;         // variable for reading the pushbutton status
-int lastbuttonState = 0;
+int lastbuttonState = 0;     // variable for storing previous button state
 unsigned long buttonMillis; // Button millis, used to measure the time the button has been held down
 unsigned long printMillis; // Print millis, used to measure the time since last print
 unsigned long currentMillis; // Current millis, updated at the start of every loop
-const unsigned long period = 5000;
-const unsigned long printperiod = 1000;
+const unsigned long period = 5000; // Decision boundary for how long the button must be held down
+const unsigned long printperiod = 1000; // Decision boundary for when to print numbers to serial monitor
 int counter = 0;
 
 void setup() {
@@ -36,7 +37,7 @@ void loop() {
     if (buttonState != lastbuttonState)
     {
       lastbuttonState = buttonState; // Update button state
-      if (buttonState == HIGH) { // If button state is high, increment counter and start millis. Note millis is only started if buttonstate is HIGH.
+      if (buttonState == HIGH) { // If button state is high, increment counter and start buttonmillis. Note buttonmillis is only started if buttonstate is HIGH.
         buttonMillis = millis();
         counter++;
         delay(10);
@@ -44,7 +45,7 @@ void loop() {
     }
   }
 
-  // If button state is low, reset button millis (button is no longer being held down and the counter should therefore reset).
+  // If button state is low, reset buttonmillis (button is no longer being held down and the counter should therefore reset).
   if (buttonState == LOW) {
     buttonMillis = currentMillis;
   }
