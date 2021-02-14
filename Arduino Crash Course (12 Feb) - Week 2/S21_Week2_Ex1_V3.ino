@@ -1,4 +1,5 @@
 // 41028 DTU, Spring 21
+// author : Mathias Hovmark
 // Week 2 - exercise 1.3
 
 const int buttonPin = 2;     // the number of the pushbutton pin
