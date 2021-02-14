@@ -1,3 +1,5 @@
+// 41028 DTU, Spring 21
+// Week 2 - exercise 1.3
 /* Button count and reset
  * author : Daniel Lilja Frykman
  * This code is based on the two build in examples from the Arduino IDE (https://www.arduino.cc/en/Tutorial/BuiltInExamples/StateChangeDetection and https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay). 
