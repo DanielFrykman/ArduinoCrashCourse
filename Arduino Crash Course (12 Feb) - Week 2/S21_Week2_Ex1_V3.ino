@@ -1,6 +1,7 @@
 // 41028 DTU, Spring 21
 // author : Mathias Hovmark
 // Week 2 - exercise 1.3
+// Example with while-loop to test 5 second threshold of button push-down. 1 second prints have not been implemented - see version 1 or version 2 for this functionality.
 
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  13;      // the number of the LED pin
