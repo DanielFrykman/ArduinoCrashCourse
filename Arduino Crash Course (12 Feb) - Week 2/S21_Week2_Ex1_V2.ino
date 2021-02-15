@@ -40,7 +40,6 @@ void loop() {
       if (buttonState == HIGH) { // If button state is high, increment counter and start buttonmillis. Note buttonmillis is only started if buttonstate is HIGH.
         buttonMillis = millis();
         counter++;
-        delay(10);
       }
     }
   }
@@ -69,8 +68,6 @@ void loop() {
   else {
     digitalWrite(ledPin, LOW);
   }
-
-  delay(10);
 
   // Print counter value every 1 second and reset printmillis to current millis.
   if (currentMillis - printMillis >= printperiod) {
